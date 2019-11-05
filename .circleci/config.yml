@@ -16,7 +16,7 @@ jobs:
           command: . build/test.sh
       - store_test_results:
           path: test-results
-  deploy-prod:
+  deploy-UAT
     docker:
     - image: circleci/node:latest
     steps:
@@ -26,10 +26,10 @@ jobs:
           command: . build/install.sh
       - run:
           name: Login to Production
-          command: . build/setup-prod.sh
+          command: . build/setup-uat.sh
       - run:
           name: Deploy to Production
-          command: . build/deploy-prod.sh
+          command: . build/deploy-uat.sh
         
 workflows:
   version: 2
@@ -41,7 +41,7 @@ workflows:
               ignore:
                 - master
                 - UAT
-      - deploy-prod:
+      - deploy-UAT
           filters:
             branches:
               only:
