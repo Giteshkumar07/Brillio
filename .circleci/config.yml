@@ -16,20 +16,6 @@ jobs:
           command: . build/test.sh
       - store_test_results:
           path: test-results
-  deploy-UAT:
-    docker:
-     - image: circleci/node:latest
-    steps:
-      - checkout
-      - run:
-          name: Install Dependencies
-          command: . build/install.sh
-      - run:
-          name: Login to UAT
-          command: . build/setup-uat.sh
-      - run:
-          name: Deploy to UAT
-          command: . build/deploy-uat.sh
   uatpackage-Install:
        docker:
          - image: circleci/node:latest
@@ -56,12 +42,6 @@ workflows:
                 - master
                 - UAT
                 - PkgBranch
-                
-      - deploy-UAT:
-          filters:
-            branches:
-              only:
-                - master
 
       - uatpackage-Install:
            filters:
