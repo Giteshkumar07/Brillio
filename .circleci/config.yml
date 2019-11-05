@@ -55,6 +55,7 @@ workflows:
               ignore:
                 - master
                 - UAT
+                - PkgBranch
                 
       - deploy-UAT:
           filters:
