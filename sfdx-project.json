@@ -12,7 +12,7 @@
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "46.0",
     "packageAliases": {
-        "ScratchBRILLIO": "0Ho2v000000GmjGCAS",
+        
         "PACKAGE1": "0Ho2v0000008OX5CAM",
         "PACKAGE1@0.1.0-1": "04t2v000005XH10AAG"
     }
