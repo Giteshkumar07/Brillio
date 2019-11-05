@@ -41,7 +41,7 @@ workflows:
               ignore:
                 - master
                 - UAT
-      - deploy-UAT
+      - deploy-UAT:
           filters:
             branches:
               only:
