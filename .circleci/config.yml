@@ -16,9 +16,9 @@ jobs:
           command: . build/test.sh
       - store_test_results:
           path: test-results
-  deploy-UAT
+  deploy-UAT:
     docker:
-    - image: circleci/node:latest
+     - image: circleci/node:latest
     steps:
       - checkout
       - run:
