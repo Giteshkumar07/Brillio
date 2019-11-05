@@ -30,7 +30,7 @@ jobs:
       - run:
           name: Deploy to UAT
           command: . build/deploy-uat.sh
-    UATpackage-Install:
+  uatpackage-Install:
        docker:
          - image: circleci/node:latest
         steps:
@@ -43,7 +43,7 @@ jobs:
               command: . build/setup-uat.sh
            - run:
                name: Install Package To UAT
-               command: . build/UATpackage-Install.sh
+               command: . build/uatpackage-Install.sh
         
 workflows:
   version: 2
@@ -62,7 +62,8 @@ workflows:
             branches:
               only:
                 - master
-      - UATpackage-Install:
+
+      - uatpackage-Install:
            filters:
             branches:
               only:
