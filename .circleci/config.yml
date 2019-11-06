@@ -17,7 +17,9 @@ jobs:
       - store_test_results:
           path: test-results
   uatpackage-Install:
-       docker:
+    jobs:
+      build:
+        docker:
          - image: circleci/node:latest
         steps:
            - checkout
