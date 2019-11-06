@@ -29,7 +29,7 @@
 		<name>CustomApplicationComponent</name>
 	</types>
 	<types>
-		<members>Brillio__c</members>
+		<members>*</members>
 		<name>CustomObject</name>
 	</types>
 	<types>
