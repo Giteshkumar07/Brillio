@@ -2,18 +2,16 @@
     "packageDirectories": [
         {
             "path": "force-app",
-            "package": "PACKAGE1",
+            "default": true,
+            "package": "PackageForUAT",
             "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT",
-            "default": true
+            "versionNumber": "0.1.0.NEXT"
         }
     ],
     "namespace": "",
     "sfdcLoginUrl": "https://login.salesforce.com",
     "sourceApiVersion": "46.0",
     "packageAliases": {
-        
-        "PACKAGE1": "0Ho2v0000008OX5CAM",
-        "PACKAGE1@0.1.0-1": "04t2v000005XH10AAG"
+        "PackageForUAT": "0Ho2v000000GmjLCAS"
     }
 }
