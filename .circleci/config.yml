@@ -7,16 +7,16 @@ jobs:
     steps: 
       - checkout 
       - run:
-        name: Install Dependencies 
-        command: . build/install.sh 
+          name: Install Dependencies 
+          command: . build/install.sh 
       - run: 
-        name: Create Scratch Org 
-        command: . build/create-scratch-org.sh 
+          name: Create Scratch Org 
+          command: . build/create-scratch-org.sh 
       - run: 
-        name: Validate Components & Run Tests 
-        command: . build/test.sh 
+          name: Validate Components & Run Tests 
+          command: . build/test.sh 
       - store_test_results: 
-        path: test-results 
+          path: test-results 
           
   uatpackage-Install:
     docker:
@@ -24,14 +24,14 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Install Dependencies
-        command: . build/install.sh
+          name: Install Dependencies
+          command: . build/install.sh
       - run:
-        name: Login to UAT
-        command: . build/setup-uat.sh
+          name: Login to UAT
+          command: . build/setup-uat.sh
       - run:
-        name: Install Package To UAT
-        command: . build/uatpackage-Install.sh
+          name: Install Package To UAT
+          command: . build/uatpackage-Install.sh
         
 workflows:
   version: 2
