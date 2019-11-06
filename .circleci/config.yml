@@ -31,7 +31,7 @@ jobs:
           command: . build/setup-uat.sh
       - run:
           name: Install Package To UAT
-          command: . build/uatpackage-install.sh
+          command: . build/UATpackage-Install.sh
         
 workflows:
   version: 2
